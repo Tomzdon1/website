@@ -1,0 +1,76 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 13px;
+  line-height: 20px;
+  margin:0;
+  background: #f5f3f0;
+}
+.toolbar_box_link{
+  text-decoration: none;
+  display: inline-block;
+  transition: line-height 1.5s ;
+  height: 60px;
+  line-height: 65px;
+  background-color: transparent !important;
+  border-bottom: 4px solid transparent;
+  color: #757575;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.toolbar_navigation:hover{
+    border-bottom: 4px solid #d6df23;
+}
+.toolbar_position{
+  transition: height 1.5s ;
+  top: 0;
+  z-index: 1;
+}
+.sticky {
+  position: fixed;
+  transition: height 1.5s ;
+  height: 50px !important;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  /*border-top: 0;*/
+}
+.sticky_logo{
+  transition: width 1.5s ;
+  width: 110px !important;
+}
+.sticky_separator{
+  transition: height 1.5s ;
+  height: 36px !important;
+}
+.sticky_link{
+  transition: height 1.5s ;
+  transition: line-height 1.5s ;
+  height: 46px !important;
+  line-height: 55px !important;
+}
+.toolbar_separator{
+  transition: height 1.5s ;
+  height: 46px;
+}
+.toolbar_logo{
+  transition: width 1.5s ;
+  width:150px;
+}
+a{
+  text-decoration: none;
+  color: #fff
+}
+ul{
+  list-style: none;
+  text-align: left;
+  padding-left: 6px;
+  margin-top: 0;
+}
+.material-icons{
+  float: right;
+  /*background-color: #d6df23*/
+}
