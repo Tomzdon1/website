@@ -22,7 +22,6 @@ const styles ={
 export default class SelectOne extends Component {
   constructor(props, context) {
     super(props, context);
-    // this.componentDidMount = this.componentDidMount.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       value: 1,

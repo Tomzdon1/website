@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -57,18 +57,40 @@ const styles = {
 
 };
 
-const state = {
-    dataSource: ['Namysłów', 'Oleśnica', 'Syców'],
-  };
 
-const Search = () => (
+
+export default class Search extends Component {
+  constructor(props, context) {
+    super(props, context);
+   this.state={
+     name:[],
+   }
+  }
+  componentDidMount(){
+  
+    fetch('http://localhost:4000/api/city')
+     .then((response) => response.json())
+      .then((responseJson) => {
+        for(var i =0; i<responseJson.length;i++){
+          var cityArray = this.state.name.slice();
+          cityArray.push(responseJson[i].name);
+          this.setState({name:cityArray});
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+}
+   render() {
+    return (
   <div>
     <Paper style={styles.container} zDepth={1}>
       <SelectOne style={styles.select_one} />
       <SelectTwo />
       <AutoComplete style={styles.text_possition}
         hintText="Miejscowość"
-        dataSource={state.dataSource}
+        dataSource={this.state.name}
         underlineShow={false}
         textFieldStyle= {styles.text_in_area}
         menuStyle={styles.input_search}
@@ -79,6 +101,6 @@ const Search = () => (
     </Paper>
 
   </div>
-);
-
-export default Search;
+   );
+  }
+}
