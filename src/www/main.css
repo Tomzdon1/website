@@ -31,7 +31,7 @@ body {
 .sticky {
   position: fixed;
   transition: height 1.5s ;
-  height: 50px !important;
+  height: 70px !important;
   width: 100%;
   left: 0;
   top: 0;
@@ -40,7 +40,7 @@ body {
 }
 .sticky_logo{
   transition: width 1.5s ;
-  width: 110px !important;
+  width: auto !important;
 }
 .sticky_separator{
   transition: height 1.5s ;
@@ -58,7 +58,7 @@ body {
 }
 .toolbar_logo{
   transition: width 1.5s ;
-  width:150px;
+  width:auto;
 }
 a{
   text-decoration: none;
