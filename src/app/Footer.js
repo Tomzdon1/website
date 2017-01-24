@@ -21,7 +21,6 @@ const styles = {
     width: '1000px',
     textAlign: 'center',
     background: 'rgb(117, 117, 117)',
-    marginLeft:75,
     fontSize: '13px'
   },
   kosikowski_paper:{
@@ -60,7 +59,8 @@ const styles = {
 };
 
 const Footer = () => (
-  <div>
+  <footer>    
+ 
     <Paper style={styles.root} zDepth={1} >
     <Paper style={styles.box} zDepth={0} >
     <Paper style={styles.kosikowski_paper} zDepth={0}  >
@@ -92,7 +92,7 @@ const Footer = () => (
     </Paper>
     </Paper>
     </Paper>
-  </div>
+  </footer>
 );
 
 export default Footer;
