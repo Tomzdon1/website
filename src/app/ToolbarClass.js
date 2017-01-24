@@ -9,14 +9,14 @@ import FlatButton from 'material-ui/FlatButton';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import IkonyToolbar from './IkonyToolbar';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
-import ShoppingBasket from 'material-ui/svg-icons/action/shopping-basket';
-import FavoriteToolbar from 'material-ui/svg-icons/action/favorite';
+import ShoppingBasket from 'material-ui/svg-icons/communication/contact-mail';
+import FavoriteToolbar from 'material-ui/svg-icons/action/grade';
 import AccountToolbar from 'material-ui/svg-icons/action/account-box';
 
 
 const logoToolbar = <img className="toolbar_logo" src="logo.png"  />;
 const pasekToolbar = <img src="pasek2.png"/>;
-const shopTravel = <ShoppingBasket/>
+const shopTravel = <img src="images/calendar.jpg"/>;
 const favoriteToolbar = <FavoriteToolbar/>
 const accountToolbar = <AccountToolbar/>
 
