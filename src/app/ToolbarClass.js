@@ -43,6 +43,7 @@ export default class ToolbarClass extends React.Component {
 
   render() {
     return (
+      <nav>
       <Toolbar className="toolbar_position" style={styles.toolbar_fix}>
         <ToolbarGroup firstChild={true} >
          <a href=""><img className="toolbar_logo" width="auto" height="100px" src="logo.png"  /></a>
@@ -67,6 +68,7 @@ export default class ToolbarClass extends React.Component {
         </ToolbarGroup>
       
       </Toolbar>
+      </nav>
     );
   }
 }
