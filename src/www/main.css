@@ -14,12 +14,12 @@ body {
   transition-duration: .2s;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-property: height;
-  height: 'auto';
-  line-height: 65px;
+  height: auto;
+  line-height: 108px;
   background-color: transparent !important;
   border-bottom: 4px solid transparent;
   color: #757575;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0 10px;
 }
 .toolbar_navigation:hover{
@@ -50,7 +50,7 @@ body {
 }
 .sticky_link{
   height: auto !important;
-  line-height: 55px !important;
+  line-height: 78px !important;
 }
 .toolbar_separator{
   transition-duration: .2s;
