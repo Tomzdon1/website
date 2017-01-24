@@ -62,7 +62,7 @@ body {
 }
 a{
   text-decoration: none;
-  color: #fff
+  color: rgb(210, 208, 204);
 }
 ul{
   list-style: none;
@@ -73,4 +73,11 @@ ul{
 .material-icons{
   float: right;
   /*background-color: #d6df23*/
+}
+h5{
+margin:0;
+margin-bottom:5px;
+text-align: left;
+font-weight: normal;
+color:rgb(67, 65, 63);
 }

@@ -65,22 +65,26 @@ const Footer = () => (
     <Paper style={styles.box} zDepth={0} >
     <Paper style={styles.kosikowski_paper} zDepth={0}  >
     <Subheader style={styles.list_header}>Kosikowski</Subheader>
-      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan, mauris at auctor mollis, lorem diam gravida ante, ultrices vehicula ipsum diam vel tortor</h5>
+     <div><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan, mauris at auctor mollis, lorem diam gravida ante, ultrices vehicula ipsum diam vel tortor</h5></div>
         <ul>
-        <li><a href="">O nas</a> </li>
-        <li><a href="">Konakt</a> </li>
-        <li><a href="">Cennik</a> </li>
-        <li><a href="">Warunki współpracy</a> </li>
+        <li><a href="">O firmie</a> </li>
+        <li><a href="">Zgłaszam ofertę</a> </li>
+        <li><a href="">Poszukuję oferty</a> </li>
+        <li><a href="">Kalkulator kredytowy</a> </li>
+        <li><a href="">Kontakt</a> </li>
         </ul>
 
     </Paper>
     <Paper style={styles.kosikowski_paper} zDepth={0}  >
-    <Subheader style={styles.list_header}>Mapa Strony</Subheader>
+    <Subheader style={styles.list_header}>Inne informacje</Subheader>
+    <div><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan, mauris at auctor mollis, lorem diam gravida ante, ultrices vehicula ipsum diam vel tortor</h5></div>
       <ul>
-        <li><a href="">Mapa miejscowości</a> </li>
-        <li><a href="">Baza firm</a> </li>
-        <li><a href="">Artykuły i porady</a> </li>
-        <li><a href="">Mapa kategorii</a> </li>
+        <li><a href="">Konto klienta</a> </li>
+        <li><a href="">Obserwowane oferty</a> </li>
+        <li><a href="">Umów prezentacje</a> </li>
+        <li><a href="">Program MDM</a> </li>
+        <li><a href="">Mapa witryny</a> </li>
+        <li><a href="">Serwis używa cookies</a> </li>
       </ul>
     </Paper>
     <Paper style={styles.kosikowski_paper_social} zDepth={0}  >
