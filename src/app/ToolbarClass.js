@@ -53,6 +53,7 @@ export default class ToolbarClass extends React.Component {
               <a className="toolbar_navigation toolbar_box_link" href=""  style={styles.buttonInput}>Zgłaszam ofertę</a>
               <a className="toolbar_navigation toolbar_box_link" href=""  style={styles.buttonInput}>Poszukuję oferty</a>
               <a className="toolbar_navigation toolbar_box_link" href=""  style={styles.buttonInput}>Kalkulator kredytowy</a>
+              <a className="toolbar_navigation toolbar_box_link" href=""  style={styles.buttonInput}>Kontakt</a>
               <a className="toolbar_navigation toolbar_box_link" href=""  style={styles.buttonInput}>Oferty nieruchomości</a>
           <ToolbarSeparator className="toolbar_separator" style={styles.toolbar_separator} />
           <BottomNavigationItem style={styles.buttonIcons}
