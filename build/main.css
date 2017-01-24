@@ -11,7 +11,7 @@ body {
 .toolbar_box_link{
   text-decoration: none;
   display: inline-block;
-  transition: line-height 1.5s ;
+  transition: line-height 0.5s ;
   height: 60px;
   line-height: 65px;
   background-color: transparent !important;
@@ -24,13 +24,12 @@ body {
     border-bottom: 4px solid #d6df23;
 }
 .toolbar_position{
-  transition: height 1.5s ;
+  transition: height 0.5s ;
   top: 0;
   z-index: 1;
 }
 .sticky {
   position: fixed;
-  transition: height 1.5s ;
   height: 70px !important;
   width: 100%;
   left: 0;
@@ -39,25 +38,23 @@ body {
   /*border-top: 0;*/
 }
 .sticky_logo{
-  transition: width 1.5s ;
   width: auto !important;
+  height: 70px !important;
 }
 .sticky_separator{
-  transition: height 1.5s ;
   height: 36px !important;
 }
 .sticky_link{
-  transition: height 1.5s ;
-  transition: line-height 1.5s ;
+ 
   height: 46px !important;
   line-height: 55px !important;
 }
 .toolbar_separator{
-  transition: height 1.5s ;
+  transition: height 0.5s ;
   height: 46px;
 }
 .toolbar_logo{
-  transition: width 1.5s ;
+  transition: height 0.5s ;
   width:auto;
 }
 a{
