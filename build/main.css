@@ -74,3 +74,7 @@ ul{
   float: right;
   /*background-color: #d6df23*/
 }
+.filterBox_select{
+    height: 36px !important;
+    margin-left: 12px;
+}

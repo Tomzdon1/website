@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -9,10 +9,13 @@ import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNaviga
 import AutoComplete from 'material-ui/AutoComplete';
 import FontIcon from 'material-ui/FontIcon';
 import {red500, yellow500, blue500} from 'material-ui/styles/colors';
-
+import FilterBox from './FilterBox';
 const recentsIcon = <img src='images/mape.png' />;
+import FlatButton from 'material-ui/FlatButton';
+
 const styles = {
   container: {
+    position:'relative',
     width: '940px',
     margin: 20,
     textAlign: 'center',
@@ -21,6 +24,7 @@ const styles = {
     padding: '20px 10px',
     backgroundColor: 'rgb(117, 115, 112)',
     color: 'white',
+    paddingBottom: 40,
   },
   input_search: {
     width:440
@@ -53,22 +57,65 @@ const styles = {
     color: 'black', //nie ten kolor
     fontSize: '15px',
     width:440
+  },
+  filtr_label:{
+    color: '#d6df23',
+  
+  },
+  filtr_button:{
+    position:'absolute',
+    textAlign:'right',
+    float:'right',
+    bottom:0,
+    right:20,
+  },
+  filterBox:{
+    marginTop: 20,
+    height: 20,
   }
 
 };
 
-const state = {
-    dataSource: ['Namysłów', 'Oleśnica', 'Syców'],
-  };
 
-const Search = () => (
+
+export default class Search extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.onClick = this.onClick.bind(this);
+   this.state={
+     name:[],
+      isToggleOn: false
+   }
+  }
+  onClick(){
+     this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+  componentDidMount(){
+    fetch('http://localhost:4000/api/city')
+     .then((response) => response.json())
+      .then((responseJson) => {
+        for(var i =0; i<responseJson.length;i++){
+          var cityArray = this.state.name.slice();
+          cityArray.push(responseJson[i].name);
+          this.setState({name:cityArray});
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+}
+   render() {
+    return (
   <div>
     <Paper style={styles.container} zDepth={1}>
       <SelectOne style={styles.select_one} />
       <SelectTwo />
       <AutoComplete style={styles.text_possition}
         hintText="Miejscowość"
-        dataSource={state.dataSource}
+        dataSource={this.state.name}
         underlineShow={false}
         textFieldStyle= {styles.text_in_area}
         menuStyle={styles.input_search}
@@ -76,9 +123,11 @@ const Search = () => (
         />
       < RaisedButton label="Szukaj" labelColor="#757370" backgroundColor="#d6df23" style={styles.button_search} />
         <FontIcon className="material-icons"  color={red500}>{recentsIcon}</FontIcon>
+       <FlatButton hoverColor="none" rippleColor = "none" label="Filtry" labelStyle={styles.filtr_label} style={styles.filtr_button} primary={true} onTouchTap={this.onClick} />
+          { this.state.isToggleOn ? <FilterBox style={styles.filterBox}/> : null }
     </Paper>
 
   </div>
-);
-
-export default Search;
+   );
+  }
+}
