@@ -39,6 +39,7 @@ const styles = {
     height: 'auto',
     width: 250,
     margin: 10,
+    marginTop:0,
     textAlign: 'center',
     background: 'rgb(117, 117, 117)',
     color:'white',
@@ -52,15 +53,20 @@ const styles = {
     paddingLeft:0
   },
   list_box:{
-      margin:-10,
+     marginTop:25,
       textAlign:'left',
-  }
-
+      float:'left',
+  },
+  fbBox:{
+    border:'none', 
+    overflow:'hidden', 
+    height:68, 
+    width:'auto'
+  },
 };
 
 const Footer = () => (
   <footer>    
- 
     <Paper style={styles.root} zDepth={1} >
     <Paper style={styles.box} zDepth={0} >
     <Paper style={styles.kosikowski_paper} zDepth={0}  >
@@ -88,11 +94,11 @@ const Footer = () => (
       </ul>
     </Paper>
     <Paper style={styles.kosikowski_paper_social} zDepth={0}  >
-        <Subheader style={styles.list_header}>Dołącz do nas</Subheader>
-        <BottomNavigationItem style={styles.list_box} icon={recentsIcon} />
-        <BottomNavigationItem style={styles.list_box} icon={faceboookIcom} /><br/><br/>
-        <BottomNavigationItem style={styles.list_box} icon={googleIcon} />
-        
+      <div class="fbBox">
+            <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbiuro.kosikowski&amp;width&amp;height=198&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=false&amp;locale=pl_PL&amp;show_border=false&amp;appId=232720443518804" scrolling="no" frameborder="0" style={styles.fbBox} allowtransparency="true">
+            </iframe>
+      </div>
+    <a href="https://play.google.com/store/apps/details?id=pl.netlinks.KosikowskiHybrid" style={styles.list_box}  title="Kosikowski. Serwis Nieruchomości - Google Play" ><img src='images/google.png' width='100'/></a>
 
     </Paper>
     </Paper>
