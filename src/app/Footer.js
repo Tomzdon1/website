@@ -9,7 +9,7 @@ const faceboookIcom = <img src='images/facebook_grey.jpg' width='30'/>
 const googleIcon = <img src='images/google.png' width='100'/>
 const styles = {
   root:{
-    height: 175,
+    height: 'auto',
     width: '100%',
     textAlign: 'centre',
     display: 'inline-block',
@@ -17,7 +17,7 @@ const styles = {
     
   },
   box:{
-    height: 175,
+    height: 'auto',
     width: '940px',
     textAlign: 'center',
     background: 'rgb(117, 117, 117)',
@@ -49,7 +49,7 @@ const styles = {
   list_header:{
     color:'white',
     textAlign:'left',
-    marginLeft:-10,
+    paddingLeft:0
   },
   list_box:{
       margin:-10,
@@ -65,6 +65,7 @@ const Footer = () => (
     <Paper style={styles.box} zDepth={0} >
     <Paper style={styles.kosikowski_paper} zDepth={0}  >
     <Subheader style={styles.list_header}>Kosikowski</Subheader>
+      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan, mauris at auctor mollis, lorem diam gravida ante, ultrices vehicula ipsum diam vel tortor</h5>
         <ul>
         <li><a href="">O nas</a> </li>
         <li><a href="">Konakt</a> </li>
