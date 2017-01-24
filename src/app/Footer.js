@@ -18,33 +18,33 @@ const styles = {
   },
   box:{
     height: 175,
-    width: '1000px',
+    width: '940px',
     textAlign: 'center',
     background: 'rgb(117, 117, 117)',
-    fontSize: '13px'
+    fontSize: '13px',
+    display:'inline-block',
   },
   kosikowski_paper:{
-    height: 100,
-    width: 250,
-    margin: 20,
+    height: 'auto',
+    width: 300,
+    margin: 10,
     textAlign: 'center',
     background: 'rgb(117, 117, 117)',
     color:'white',
     display: 'inline-block',
     fontSize: '13px',
+    float:'left',
   },
   kosikowski_paper_social:{
-    height: 100,
-    width: 125,
-    margin: 20,
+    height: 'auto',
+    width: 250,
+    margin: 10,
     textAlign: 'center',
     background: 'rgb(117, 117, 117)',
     color:'white',
     display: 'inline-block',
     fontSize: '13px',
-    position:'absolute'
-    
-    
+    float:'left',
   },
   list_header:{
     color:'white',
