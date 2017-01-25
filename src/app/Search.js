@@ -35,8 +35,8 @@ const styles = {
   button_search: {
     height: 48,
     float:'left',
-    width:110
-    
+    width:110,
+    lineHeight:51
   },
   select_one: {
     float: 'left',

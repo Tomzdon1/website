@@ -73,6 +73,10 @@ ul{
   text-align: left;
   padding-left: 0px;
   margin-top: 0;
+  padding-top: 5px;
+}
+ul>li{
+  margin-bottom: 5px;
 }
 .material-icons{
   float: right;
@@ -87,8 +91,12 @@ margin:0;
 margin-bottom:5px;
 text-align: left;
 font-weight: normal;
-color:rgb(67, 65, 63);
+color:white;
 }
 .new_offers_icon:hover{
   fill: #d6df23 !important;
+}
+.fbBox{
+  padding-top: 28px;
+  width: auto;
 }

@@ -50,7 +50,8 @@ const styles = {
   list_header:{
     color:'white',
     textAlign:'left',
-    paddingLeft:0
+    paddingLeft:0,
+    fontSize:16
   },
   list_box:{
      marginTop:25,
@@ -94,7 +95,7 @@ const Footer = () => (
       </ul>
     </Paper>
     <Paper style={styles.kosikowski_paper_social} zDepth={0}  >
-      <div class="fbBox">
+      <div className="fbBox">
             <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbiuro.kosikowski&amp;width&amp;height=198&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=false&amp;locale=pl_PL&amp;show_border=false&amp;appId=232720443518804" scrolling="no" frameborder="0" style={styles.fbBox} allowtransparency="true">
             </iframe>
       </div>
