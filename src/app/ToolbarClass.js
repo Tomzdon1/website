@@ -26,6 +26,7 @@ const styles = {
     },
     buttonIcons:{
       minWidth : 0,
+      padding:10,
     },
     toolbar_fix:{
       width:'100%',
@@ -35,6 +36,8 @@ const styles = {
     },
     toolbar_separator:{
       height:'80px',
+      margin: '0 24px',
+      marginLeft:0,
     }
 
 }
@@ -45,8 +48,8 @@ export default class ToolbarClass extends React.Component {
     return (
       <nav>
       <Toolbar className="toolbar_position" style={styles.toolbar_fix}>
-        <ToolbarGroup firstChild={true} >
-         <a href=""><img className="toolbar_logo" width="auto" height="100px" src="logo.png"  /></a>
+        <ToolbarGroup className="toolbar_box_logo" firstChild={true} >
+         <a href=""><img className="toolbar_logo" src="logo.png"  /></a>
         </ToolbarGroup>
            <ToolbarGroup className="toolbar_box" >
               <a className="toolbar_navigation toolbar_box_link" href=""  style={styles.buttonInput}>O firmie</a>

@@ -24,7 +24,15 @@ const styles ={
       style: {
         backgroundColor:'black'
       } 
-    }
+    },
+    label_style:{
+      paddingRight: 0,
+      textAlign:'center',
+      float:'left',
+      marginLeft:25
+    },
+
+    
 } 
 const styled={
   
@@ -59,6 +67,7 @@ export default class SelectTwo extends Component {
           onChange={this.handleChange}
           autoWidth={true}
           underlineShow={false}
+          labelStyle={styles.label_style}
         >
           <MenuItem  value={1} primaryText="Domy" />
           <MenuItem  value={2} primaryText="Mieszkania" />

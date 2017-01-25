@@ -17,7 +17,15 @@ const styles ={
     },
     color_line:{
       color:'green'
-    }
+    },
+    label_style:{
+      paddingRight: 0,
+      textAlign:'center',
+      float:'left',
+      marginLeft:25
+    },
+
+
 }
 export default class SelectOne extends Component {
   constructor(props, context) {
@@ -57,6 +65,7 @@ componentDidMount(){
           onChange={this.handleChange}
           autoWidth={true}
           underlineShow={false}
+          labelStyle={styles.label_style}
         >
           <MenuItem value={1} primaryText="Sprzedaż"/>
           <MenuItem value={2} primaryText={this.state.name} />

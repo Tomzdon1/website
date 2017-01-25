@@ -63,11 +63,10 @@ const styles = {
   
   },
   filtr_button:{
-    position:'absolute',
-    textAlign:'right',
     float:'right',
-    bottom:0,
-    right:20,
+    position:'absolute',
+    right:70,
+    top:70
   },
   filterBox:{
     marginTop: 20,
