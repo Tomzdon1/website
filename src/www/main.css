@@ -78,16 +78,14 @@ ul{
   float: right;
   /*background-color: #d6df23*/
 }
-<<<<<<< HEAD
 .filterBox_select{
     height: 36px !important;
-    margin-left: 12px;
-=======
+  margin-left: 12px;
+}
 h5{
 margin:0;
 margin-bottom:5px;
 text-align: left;
 font-weight: normal;
 color:rgb(67, 65, 63);
->>>>>>> future/footer
 }
