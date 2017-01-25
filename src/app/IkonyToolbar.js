@@ -3,12 +3,12 @@ import FontIcon from 'material-ui/FontIcon';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
 import Paper from 'material-ui/Paper';
 import IconLocationOn from 'material-ui/svg-icons/communication/forum';
-import ContactMail from 'material-ui/svg-icons/communication/contact-mail';
-import Chat from 'material-ui/svg-icons/communication/chat';
+import FavoritOffer from 'material-ui/svg-icons/action/grade';
+import Chat from 'material-ui/svg-icons/communication/contact-mail';
 
 
 const recentsIcon = <Chat />;
-const favoritesIcon = <ContactMail/>;
+const favoritesIcon = <FavoritOffer/>;
 const nearbyIcon = <IconLocationOn />;
 
 /**

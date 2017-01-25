@@ -11,27 +11,30 @@ body {
 .toolbar_box_link{
   text-decoration: none;
   display: inline-block;
-  transition: line-height 1.5s ;
-  height: 60px;
-  line-height: 65px;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-property: height;
+  height: auto;
+  line-height: 108px;
   background-color: transparent !important;
   border-bottom: 4px solid transparent;
   color: #757575;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0 10px;
 }
 .toolbar_navigation:hover{
     border-bottom: 4px solid #d6df23;
 }
 .toolbar_position{
-  transition: height 1.5s ;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-property: height;
   top: 0;
   z-index: 1;
 }
 .sticky {
   position: fixed;
-  transition: height 1.5s ;
-  height: 50px !important;
+  height: 70px !important;
   width: 100%;
   left: 0;
   top: 0;
@@ -39,26 +42,27 @@ body {
   /*border-top: 0;*/
 }
 .sticky_logo{
-  transition: width 1.5s ;
-  width: 110px !important;
+  width: auto !important;
+  height: 70px !important;
 }
 .sticky_separator{
-  transition: height 1.5s ;
-  height: 36px !important;
+  height: 50px !important;
 }
 .sticky_link{
-  transition: height 1.5s ;
-  transition: line-height 1.5s ;
-  height: 46px !important;
-  line-height: 55px !important;
+  height: auto !important;
+  line-height: 78px !important;
 }
 .toolbar_separator{
-  transition: height 1.5s ;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-property: height;;
   height: 46px;
 }
 .toolbar_logo{
-  transition: width 1.5s ;
-  width:150px;
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-property: height;
+  width:auto;
 }
 a{
   text-decoration: none;
