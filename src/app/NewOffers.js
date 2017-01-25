@@ -105,7 +105,7 @@ const NewOffers = () => (
           key={tile.img}
           title={tile.title}
           subtitle={tile.subtitle}
-          actionIcon={<IconButton><StarBorder color="#d6df23" /></IconButton>}
+          actionIcon={<IconButton ><StarBorder className="new_offers_icon"  color="white" /></IconButton>}
           titleStyle={styles.titleStyle}
           titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
           style={styles.textList}
