@@ -54,7 +54,7 @@ const styles = {
 };
 
 const DisplayOffers = () => (
-    <Paper style={styles.paper_back} zDepth={1} >
+    <Paper style={styles.paper_back} zDepth={0} >
     <div >
     <Paper style={styles.paper_with_box} zDepth={0} >
     <h2 style={styles.h2}>Przeglądaj oferty biura</h2>

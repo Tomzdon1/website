@@ -95,7 +95,7 @@ const tilesData = [
  * This example demonstrates the horizontal scrollable single-line grid list of images.
  */
 const NewOffers = () => (
-<Paper style={styles.paper_back} zDepth={1} >
+<Paper style={styles.paper_back} zDepth={0} >
 <Paper style={styles.paper_with_box} zDepth={0} >
   <h2 style={styles.h2}>Najnowsze oferty</h2>
   <div style={styles.root}>

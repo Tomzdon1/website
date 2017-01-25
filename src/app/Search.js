@@ -110,7 +110,7 @@ export default class Search extends Component {
    render() {
     return (
   <div>
-    <Paper style={styles.container} zDepth={1}>
+    <Paper style={styles.container} zDepth={0}>
       <SelectOne style={styles.select_one} />
       <SelectTwo />
       <AutoComplete style={styles.text_possition}
