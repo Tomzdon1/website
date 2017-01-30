@@ -32,6 +32,9 @@ const styles = {
   search: {
     border: 'solid 1px',
   },
+  button_search_label:{
+    lineHeight:'51px'
+  },
   button_search: {
     height: 48,
     float:'left',
@@ -60,7 +63,6 @@ const styles = {
   },
   filtr_label:{
     color: '#d6df23',
-  
   },
   filtr_button:{
     float:'right',
@@ -120,7 +122,7 @@ export default class Search extends Component {
         menuStyle={styles.input_search}
         anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:'440px'}}
         />
-      < RaisedButton label="Szukaj" labelColor="#757370" backgroundColor="#d6df23" style={styles.button_search} />
+      < RaisedButton label="Szukaj" labelColor="#757370" backgroundColor="#d6df23" style={styles.button_search} labelStyle={styles.button_search_label} />
         <FontIcon className="material-icons"  color={red500}>{recentsIcon}</FontIcon>
        <FlatButton hoverColor="none" rippleColor = "none" label="Filtry" labelStyle={styles.filtr_label} style={styles.filtr_button} primary={true} onTouchTap={this.onClick} />
           { this.state.isToggleOn ? <FilterBox style={styles.filterBox}/> : null }

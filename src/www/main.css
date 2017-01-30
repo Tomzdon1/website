@@ -15,7 +15,7 @@ body {
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-property: height;
   height: auto;
-  line-height: 108px;
+  line-height: 100px;
   background-color: transparent !important;
   border-bottom: 4px solid transparent;
   color: #757575;
@@ -46,7 +46,7 @@ body {
 }
 .sticky_link{
   height: auto !important;
-  line-height: 78px !important;
+  line-height: 70px !important;
 }
 .toolbar_separator{
   transition-duration: .2s;

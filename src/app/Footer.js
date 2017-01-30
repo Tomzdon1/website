@@ -54,7 +54,7 @@ const styles = {
     fontSize:16
   },
   list_box:{
-     marginTop:25,
+     marginTop:35,
       textAlign:'left',
       float:'left',
   },

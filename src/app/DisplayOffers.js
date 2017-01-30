@@ -72,7 +72,7 @@ const DisplayOffers = () => (
         </Paper></a>
         <a href=""><Paper style={styles.office_box} zDepth={1}>
             <img src="wszystkie_oferty.jpg" />
-            <h2 style={styles.office_title_h2}><small style={styles.office_title_small}></small>Wszystkie oferty</h2>
+            <h2 style={styles.office_title_h2}><small style={styles.office_title_small}><br></br></small>Wszystkie oferty</h2>
         </Paper></a>
     </Paper>
     </div>
