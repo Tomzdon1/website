@@ -4,7 +4,7 @@ import Paper from 'material-ui/Paper';
 const styles = {
     office_box: {
         display: 'inline-block',
-        height: 260,
+        height: 'auto',
         width: 220,
         margin: '20px 10px 0',
         textAlign: 'left',
@@ -26,20 +26,22 @@ const styles = {
         minHeight: 15,
     },
     paper_back: {
-        height: 360,
+        height: 'auto',
         width: '100%',
         marginTop: 20,
         textAlign: 'centre',
         display: 'inline-block',
-        background: '#f5f3f0',
+        backgroundColor: 'none',
+        paddingBottom: '5px'
+        
     },
     paper_with_box: {
-        height: 360,
+        height: 'auto',
         width: '1000px',
         marginTop: 20,
         textAlign: 'centre',
         display: 'inline-block',
-        background: '#f5f3f0',
+        backgroundColor: 'none',
     },
     h2: {
         textAlign: 'left',

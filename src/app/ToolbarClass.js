@@ -27,6 +27,8 @@ const styles = {
     buttonIcons:{
       minWidth : 0,
       padding:10,
+      paddingRight:10,
+      paddingLeft:10,
     },
     toolbar_fix:{
       width:'100%',

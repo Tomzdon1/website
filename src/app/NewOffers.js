@@ -25,19 +25,20 @@ const styles = {
     textAlign: 'left',
   },
   paper_back:{
-    height: 500,
+    height: 'auto',
     width: '100%',
     textAlign: 'centre',
     display: 'inline-block',
-    background: '#f5f3f0',
+    backgroundColor: 'none',
+    paddingBottom:50
   },
   paper_with_box: {
-    height: 360,
+    height: 'auto',
     width: '1000px',
     marginTop: 20,
     textAlign: 'centre',
     display: 'inline-block',
-    background: '#f5f3f0',
+    backgroundColor: 'none',
   },
   h2:{
     textAlign:'left',
