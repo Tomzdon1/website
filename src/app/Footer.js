@@ -18,7 +18,7 @@ const styles = {
   },
   box:{
     height: 'auto',
-    width: '940px',
+    maxWidth: '940px',
     textAlign: 'center',
     backgroundColor: 'none',
     fontSize: '13px',

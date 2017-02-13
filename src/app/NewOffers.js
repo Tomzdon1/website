@@ -8,7 +8,7 @@ const styles = {
     display: 'inline-block',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    width:940,
+    maxWidth:940,
     high:'auto',
     margin: '20px 10px 0',
   },
@@ -34,7 +34,7 @@ const styles = {
   },
   paper_with_box: {
     height: 'auto',
-    width: '1000px',
+    maxWidth: '1000px',
     marginTop: 20,
     textAlign: 'centre',
     display: 'inline-block',

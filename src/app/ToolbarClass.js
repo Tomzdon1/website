@@ -38,7 +38,7 @@ const styles = {
     },
     toolbar_separator:{
       height:'80px',
-      margin: '0 24px',
+      margin: '0 10px',
       marginLeft:0,
     }
 

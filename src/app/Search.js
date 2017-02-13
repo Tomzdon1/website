@@ -10,13 +10,14 @@ import AutoComplete from 'material-ui/AutoComplete';
 import FontIcon from 'material-ui/FontIcon';
 import {red500, yellow500, blue500} from 'material-ui/styles/colors';
 import FilterBox from './FilterBox';
-const recentsIcon = <img src='images/mape.png' />;
+const recentsIcon = <img src='images/map.png' />;
 import FlatButton from 'material-ui/FlatButton';
 
 const styles = {
   container: {
     position:'relative',
-    width: '940px',
+    minWidth: '940px',
+    maxWidth: '600px',
     margin: 20,
     textAlign: 'center',
     display: 'inline-block',
