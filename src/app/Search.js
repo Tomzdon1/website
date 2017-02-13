@@ -10,8 +10,11 @@ import AutoComplete from 'material-ui/AutoComplete';
 import FontIcon from 'material-ui/FontIcon';
 import {red500, yellow500, blue500} from 'material-ui/styles/colors';
 import FilterBox from './FilterBox';
+import GoogleMap from './Map';
+import GooglePlace from './Places';
 const recentsIcon = <img src='images/map.png' />;
 import FlatButton from 'material-ui/FlatButton';
+import superagent from 'superagent';
 
 const styles = {
   container: {
@@ -86,6 +89,7 @@ export default class Search extends Component {
     this.onClick = this.onClick.bind(this);
    this.state={
      name:[],
+     geo:[],
       isToggleOn: false
    }
   }
@@ -107,9 +111,35 @@ export default class Search extends Component {
       .catch((error) => {
         console.error(error);
       });
+      const url ='http://localhost:4000/api/city';
+      superagent
+      .get(url)
+      .query(null)
+      .set('Accept','text/json')
+      .end((error,response)=>{
+      
+        const venues = response.body[0].venues
+        console.log(JSON.stringify(venues))
+        this.setState({
+          geo : venues
+        })
+       
+      })
 
 }
    render() {
+     const location = {
+       lat:40.7575285,
+       lng:-73.9884469,
+     }
+     const markers = [
+       {
+         location: {
+            lat:40.7575285,
+            lng:-73.9884469,
+         }
+       }
+     ]
     return (
   <div>
     <Paper style={styles.container} zDepth={0}>
@@ -127,6 +157,7 @@ export default class Search extends Component {
         <FontIcon className="material-icons"  color={red500}>{recentsIcon}</FontIcon>
        <FlatButton hoverColor="none" rippleColor = "none" label="Filtry" labelStyle={styles.filtr_label} style={styles.filtr_button} primary={true} onTouchTap={this.onClick} />
           { this.state.isToggleOn ? <FilterBox style={styles.filterBox}/> : null }
+          <GoogleMap center = {location} markers = {this.state.geo}/>
     </Paper>
 
   </div>
