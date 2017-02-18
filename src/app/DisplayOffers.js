@@ -4,7 +4,7 @@ import Paper from 'material-ui/Paper';
 const styles = {
     office_box: {
         display: 'inline-block',
-        height: 260,
+        height: 'auto',
         width: 220,
         margin: '20px 10px 0',
         textAlign: 'left',
@@ -26,20 +26,22 @@ const styles = {
         minHeight: 15,
     },
     paper_back: {
-        height: 360,
+        height: 'auto',
         width: '100%',
         marginTop: 20,
         textAlign: 'centre',
         display: 'inline-block',
-        background: '#f5f3f0',
+        backgroundColor: 'none',
+        paddingBottom: '5px'
+        
     },
     paper_with_box: {
-        height: 360,
-        width: '1000px',
+        height: 'auto',
+        maxwidth: '1000px',
         marginTop: 20,
         textAlign: 'centre',
         display: 'inline-block',
-        background: '#f5f3f0',
+        backgroundColor: 'none',
     },
     h2: {
         textAlign: 'left',
@@ -54,7 +56,7 @@ const styles = {
 };
 
 const DisplayOffers = () => (
-    <Paper style={styles.paper_back} zDepth={1} >
+    <Paper style={styles.paper_back} zDepth={0} >
     <div >
     <Paper style={styles.paper_with_box} zDepth={0} >
     <h2 style={styles.h2}>Przeglądaj oferty biura</h2>
@@ -72,7 +74,7 @@ const DisplayOffers = () => (
         </Paper></a>
         <a href=""><Paper style={styles.office_box} zDepth={1}>
             <img src="wszystkie_oferty.jpg" />
-            <h2 style={styles.office_title_h2}><small style={styles.office_title_small}></small>Wszystkie oferty</h2>
+            <h2 style={styles.office_title_h2}><small style={styles.office_title_small}><br></br></small>Wszystkie oferty</h2>
         </Paper></a>
     </Paper>
     </div>

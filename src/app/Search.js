@@ -10,13 +10,17 @@ import AutoComplete from 'material-ui/AutoComplete';
 import FontIcon from 'material-ui/FontIcon';
 import {red500, yellow500, blue500} from 'material-ui/styles/colors';
 import FilterBox from './FilterBox';
-const recentsIcon = <img src='images/mape.png' />;
+import GoogleMap from './Map';
+import GooglePlace from './Places';
+const recentsIcon = <img src='images/map.png' />;
 import FlatButton from 'material-ui/FlatButton';
+import superagent from 'superagent';
 
 const styles = {
   container: {
     position:'relative',
-    width: '940px',
+    minWidth: '940px',
+    maxWidth: '600px',
     margin: 20,
     textAlign: 'center',
     display: 'inline-block',
@@ -32,11 +36,14 @@ const styles = {
   search: {
     border: 'solid 1px',
   },
+  button_search_label:{
+    lineHeight:'51px'
+  },
   button_search: {
     height: 48,
     float:'left',
-    width:110
-    
+    width:110,
+    lineHeight:51
   },
   select_one: {
     float: 'left',
@@ -60,14 +67,12 @@ const styles = {
   },
   filtr_label:{
     color: '#d6df23',
-  
   },
   filtr_button:{
-    position:'absolute',
-    textAlign:'right',
     float:'right',
-    bottom:0,
-    right:20,
+    position:'absolute',
+    right:70,
+    top:70
   },
   filterBox:{
     marginTop: 20,
@@ -84,6 +89,7 @@ export default class Search extends Component {
     this.onClick = this.onClick.bind(this);
    this.state={
      name:[],
+     geo:[],
       isToggleOn: false
    }
   }
@@ -105,12 +111,38 @@ export default class Search extends Component {
       .catch((error) => {
         console.error(error);
       });
+      const url ='http://localhost:4000/api/city';
+      superagent
+      .get(url)
+      .query(null)
+      .set('Accept','text/json')
+      .end((error,response)=>{
+      
+        const venues = response.body[0].venues
+        console.log(JSON.stringify(venues))
+        this.setState({
+          geo : venues
+        })
+       
+      })
 
 }
    render() {
+     const location = {
+       lat:40.7575285,
+       lng:-73.9884469,
+     }
+     const markers = [
+       {
+         location: {
+            lat:40.7575285,
+            lng:-73.9884469,
+         }
+       }
+     ]
     return (
   <div>
-    <Paper style={styles.container} zDepth={1}>
+    <Paper style={styles.container} zDepth={0}>
       <SelectOne style={styles.select_one} />
       <SelectTwo />
       <AutoComplete style={styles.text_possition}
@@ -121,10 +153,11 @@ export default class Search extends Component {
         menuStyle={styles.input_search}
         anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:'440px'}}
         />
-      < RaisedButton label="Szukaj" labelColor="#757370" backgroundColor="#d6df23" style={styles.button_search} />
+      < RaisedButton label="Szukaj" labelColor="#757370" backgroundColor="#d6df23" style={styles.button_search} labelStyle={styles.button_search_label} />
         <FontIcon className="material-icons"  color={red500}>{recentsIcon}</FontIcon>
        <FlatButton hoverColor="none" rippleColor = "none" label="Filtry" labelStyle={styles.filtr_label} style={styles.filtr_button} primary={true} onTouchTap={this.onClick} />
           { this.state.isToggleOn ? <FilterBox style={styles.filterBox}/> : null }
+          <GoogleMap center = {location} markers = {this.state.geo}/>
     </Paper>
 
   </div>

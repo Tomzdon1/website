@@ -9,14 +9,14 @@ import FlatButton from 'material-ui/FlatButton';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import IkonyToolbar from './IkonyToolbar';
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation';
-import ShoppingBasket from 'material-ui/svg-icons/communication/contact-mail';
+import ShoppingBasket from 'material-ui/svg-icons/action/event';
 import FavoriteToolbar from 'material-ui/svg-icons/action/grade';
 import AccountToolbar from 'material-ui/svg-icons/action/account-box';
 
 
 const logoToolbar = <img className="toolbar_logo" src="logo.png"  />;
 const pasekToolbar = <img src="pasek2.png"/>;
-const shopTravel = <img src="images/calendar.jpg"/>;
+const shopTravel = <ShoppingBasket/>;
 const favoriteToolbar = <FavoriteToolbar/>
 const accountToolbar = <AccountToolbar/>
 
@@ -26,6 +26,9 @@ const styles = {
     },
     buttonIcons:{
       minWidth : 0,
+      padding:10,
+      paddingRight:10,
+      paddingLeft:10,
     },
     toolbar_fix:{
       width:'100%',
@@ -35,6 +38,8 @@ const styles = {
     },
     toolbar_separator:{
       height:'80px',
+      margin: '0 10px',
+      marginLeft:0,
     }
 
 }
@@ -45,8 +50,8 @@ export default class ToolbarClass extends React.Component {
     return (
       <nav>
       <Toolbar className="toolbar_position" style={styles.toolbar_fix}>
-        <ToolbarGroup firstChild={true} >
-         <a href=""><img className="toolbar_logo" width="auto" height="100px" src="logo.png"  /></a>
+        <ToolbarGroup className="toolbar_box_logo" firstChild={true} >
+         <a href=""><img className="toolbar_logo" src="logo.png"  /></a>
         </ToolbarGroup>
            <ToolbarGroup className="toolbar_box" >
               <a className="toolbar_navigation toolbar_box_link" href=""  style={styles.buttonInput}>O firmie</a>

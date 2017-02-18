@@ -15,12 +15,12 @@ body {
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-property: height;
   height: auto;
-  line-height: 108px;
   background-color: transparent !important;
   border-bottom: 4px solid transparent;
   color: #757575;
   font-size: 16px;
   padding: 0 10px;
+  padding-top: 40px;
 }
 .toolbar_navigation:hover{
     border-bottom: 4px solid #d6df23;
@@ -41,16 +41,12 @@ body {
   z-index: 100;
   /*border-top: 0;*/
 }
-.sticky_logo{
-  width: auto !important;
-  height: 70px !important;
-}
 .sticky_separator{
   height: 50px !important;
 }
 .sticky_link{
   height: auto !important;
-  line-height: 78px !important;
+  padding-top: 25px !important;
 }
 .toolbar_separator{
   transition-duration: .2s;
@@ -58,11 +54,20 @@ body {
   transition-property: height;;
   height: 46px;
 }
+.toolbar_box_logo{
+  padding: 10px !important;
+  margin-left: 0 !important;
+  height: auto !important;
+  display: inline-block !important;
+  width: auto;
+  max-width: 240px;
+}
 .toolbar_logo{
   transition-duration: .2s;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-property: height;
   width:auto;
+  height: 100%
 }
 a{
   text-decoration: none;
@@ -73,6 +78,10 @@ ul{
   text-align: left;
   padding-left: 0px;
   margin-top: 0;
+  padding-top: 5px;
+}
+ul>li{
+  margin-bottom: 5px;
 }
 .material-icons{
   float: right;
@@ -81,11 +90,22 @@ ul{
 .filterBox_select{
     height: 36px !important;
   margin-left: 12px;
+
 }
 h5{
 margin:0;
 margin-bottom:5px;
 text-align: left;
 font-weight: normal;
-color:rgb(67, 65, 63);
+color:white;
+}
+.new_offers_icon:hover{
+  fill: #d6df23 !important;
+}
+.fbBox{
+  padding-top: 28px;
+  width: auto;
+}
+.footer_box{
+   background-color: 'rgb(117, 117, 117)',
 }

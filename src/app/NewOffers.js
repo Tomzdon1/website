@@ -8,7 +8,7 @@ const styles = {
     display: 'inline-block',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    width:940,
+    maxWidth:940,
     high:'auto',
     margin: '20px 10px 0',
   },
@@ -25,19 +25,20 @@ const styles = {
     textAlign: 'left',
   },
   paper_back:{
-    height: 500,
+    height: 'auto',
     width: '100%',
     textAlign: 'centre',
     display: 'inline-block',
-    background: '#f5f3f0',
+    backgroundColor: 'none',
+    paddingBottom:50
   },
   paper_with_box: {
-    height: 360,
-    width: '1000px',
+    height: 'auto',
+    maxWidth: '1000px',
     marginTop: 20,
     textAlign: 'centre',
     display: 'inline-block',
-    background: '#f5f3f0',
+    backgroundColor: 'none',
   },
   h2:{
     textAlign:'left',
@@ -95,7 +96,7 @@ const tilesData = [
  * This example demonstrates the horizontal scrollable single-line grid list of images.
  */
 const NewOffers = () => (
-<Paper style={styles.paper_back} zDepth={1} >
+<Paper style={styles.paper_back} zDepth={0} >
 <Paper style={styles.paper_with_box} zDepth={0} >
   <h2 style={styles.h2}>Najnowsze oferty</h2>
   <div style={styles.root}>
@@ -105,7 +106,7 @@ const NewOffers = () => (
           key={tile.img}
           title={tile.title}
           subtitle={tile.subtitle}
-          actionIcon={<IconButton><StarBorder color="#d6df23" /></IconButton>}
+          actionIcon={<IconButton ><StarBorder className="new_offers_icon"  color="white" /></IconButton>}
           titleStyle={styles.titleStyle}
           titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
           style={styles.textList}

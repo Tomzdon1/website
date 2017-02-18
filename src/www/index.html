@@ -11,6 +11,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYA1eCg1ToFOxVfVxqZHzqNnNJFgnLNYw"
+    ></script>
 
 </head>
 
@@ -23,12 +25,10 @@ $(document).ready(function() {
 
    if (scrollTop > stickyNavTop) { 
       $('.toolbar_position').addClass('sticky');
-      $('.toolbar_logo').addClass('sticky_logo');
       $('.toolbar_box_link').addClass('sticky_link');
       $('.toolbar_separator').addClass('sticky_separator');
    } else {
       $('.toolbar_position').removeClass('sticky');
-      $('.toolbar_logo').removeClass('sticky_logo');
       $('.toolbar_box_link').removeClass('sticky_link');
       $('.toolbar_separator').removeClass('sticky_separator');
     }
