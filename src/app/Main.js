@@ -11,6 +11,8 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Toolbar from './ToolbarClass';
 import Image_kosikowski from './Image_kosikowski';
+import {cyan500} from 'material-ui/styles/colors';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 
 const styles = {
   container: {
@@ -21,6 +23,15 @@ const styles = {
     paddingTop :0 
   },
 };
+const muiTheme = getMuiTheme({
+  palette: {
+    textColor: cyan500,
+  },
+  appBar: {
+    height: 50,
+  },
+
+});
 
 
 class Main extends Component {

@@ -8,13 +8,15 @@ import Map from 'material-ui/svg-icons/maps/map';
 import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
 import AutoComplete from 'material-ui/AutoComplete';
 import FontIcon from 'material-ui/FontIcon';
-import {red500, yellow500, blue500} from 'material-ui/styles/colors';
+import {red500, yellow500, blue500, grey500} from 'material-ui/styles/colors';
 import FilterBox from './FilterBox';
 import GoogleMap from './Map';
 import GooglePlace from './Places';
 const recentsIcon = <img src='images/map.png' />;
 import FlatButton from 'material-ui/FlatButton';
 import superagent from 'superagent';
+import SvgIcon from 'material-ui/SvgIcon';
+import IconButton from 'material-ui/IconButton';
 
 const styles = {
   container: {
@@ -80,6 +82,11 @@ const styles = {
   }
 
 };
+const HomeIcon = (props) => (
+  <SvgIcon {...props}>
+    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+  </SvgIcon>
+);
 
 
 
@@ -154,10 +161,10 @@ export default class Search extends Component {
         anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:'440px'}}
         />
       < RaisedButton label="Szukaj" labelColor="#757370" backgroundColor="#d6df23" style={styles.button_search} labelStyle={styles.button_search_label} />
-        <FontIcon className="material-icons"  color={red500}>{recentsIcon}</FontIcon>
+       <IconButton style ={{height:'auto', padding:0}}iconStyle={{width:50, height:'auto', color:'rgb(214, 223, 35)'}} ><Map  /></IconButton>
        <FlatButton hoverColor="none" rippleColor = "none" label="Filtry" labelStyle={styles.filtr_label} style={styles.filtr_button} primary={true} onTouchTap={this.onClick} />
           { this.state.isToggleOn ? <FilterBox style={styles.filterBox}/> : null }
-          <GoogleMap center = {location} markers = {this.state.geo}/>
+            <GoogleMap center = {location} markers = {this.state.geo}/>
     </Paper>
 
   </div>
