@@ -109,3 +109,59 @@ color:white;
 .footer_box{
    background-color: 'rgb(117, 117, 117)',
 }
+.window-badge-mobile-container{
+  display: block;
+}
+.window-badge-mobile-container{
+    width: 93px;
+    position: fixed;
+    top: 270px;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+}
+.window-badge-mobile {
+    width: 93px;
+    text-align: center;
+}
+.circle{
+    width: 115px;
+    height: 115px;
+    line-height: 115px;
+    background: rgb(117, 115, 112);
+    display: block;
+    margin-left: -22px;
+    border-radius: 50%;
+    color: #fff;
+    position: relative;
+}
+.icon-close{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+}
+.icon-close::before {
+    content: url('images/cross.png');
+}
+.window-badge-mobile .circle[class*="icon-"]:before {
+    display: inline-block;
+    font-size: 60px;
+    vertical-align: middle;
+}
+.icon-mobile::before {
+    content: url('images/mobile.png');
+    width:100px;
+    margin-top: 25px;
+}
+.window-badge-mobile .title {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 5px 4px 0;
+    padding: 0 22px;
+    font-size: 12px;
+    line-height: 1.2;
+    color:rgb(117, 115, 112)
+}

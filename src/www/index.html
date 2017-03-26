@@ -12,16 +12,22 @@
   <link rel="stylesheet" type="text/css" href="main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYA1eCg1ToFOxVfVxqZHzqNnNJFgnLNYw"
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     ></script>
-
 </head>
 
 <script>
 $(document).ready(function() {
+  if (getCookie("mobile") == null ){
+    document.cookie = "mobile=1";
+  }
+ 
+   var bagdeMobile = getCookie("mobile");
+   
    var stickyNavTop = $('.toolbar_position').offset().top;
-
    var stickyNav = function(){
    var scrollTop = $(window).scrollTop();
+   
 
    if (scrollTop > stickyNavTop) { 
       $('.toolbar_position').addClass('sticky');
@@ -39,12 +45,28 @@ $(document).ready(function() {
    $(window).scroll(function() {
       stickyNav();
    });
+   if (bagdeMobile == '0') {
+     $(".window-badge-mobile-container").css("display","none");
+   }
+
+   $("#mobileAppsbadgeClose").click(function(){
+      var mobileBadge = getCookie("mobile");
+        $(".window-badge-mobile-container").css("display","none");
+          document.cookie = "mobile=0";
+   });  
    });
 
 </script>
 <body>
 	<div id="app"></div>
-	
+	<div class="window-badge-mobile-container hidden-print">
+	<div class="window-badge-mobile" id="mobileAppsbadge" style="display: block;">
+		<a href="https://www.otodom.pl/mobilne/" class="circle icon-mobile">
+			<span class="title">   Nieruchomości w Twoim Telefonie</span>
+		</a>
+		<a href = "#"class="icon-close" id="mobileAppsbadgeClose"></a>
+	</div>
+</div>
 	
 </div>
 	<!-- This script adds the Roboto font to our project. For more detail go to this site:  http://www.google.com/fonts#UsePlace:use/Collection:Roboto:400,300,500 -->
@@ -60,6 +82,23 @@ $(document).ready(function() {
       var s = document.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(wf, s);
     })();
+  </script>
+  <script>
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+    }
   </script>
   
 	<script src="app.js"></script>

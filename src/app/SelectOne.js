@@ -9,7 +9,6 @@ import MenuItem from 'material-ui/MenuItem';
 const styles ={
     select_possition:{
         float:'left',
-        marginLeft:'25px'
     },
     select_width:{
         width:128,
