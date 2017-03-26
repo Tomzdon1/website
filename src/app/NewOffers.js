@@ -34,7 +34,7 @@ const styles = {
   },
   paper_with_box: {
     height: 'auto',
-    maxWidth: '1000px',
+    maxWidth: '1100px',
     marginTop: 20,
     textAlign: 'centre',
     display: 'inline-block',

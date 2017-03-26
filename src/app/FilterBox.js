@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
+import AutoComplete from 'material-ui/AutoComplete';
 
 const styles ={
     select_possition:{
@@ -9,7 +10,7 @@ const styles ={
         marginTop: 20,
         height: 20,
         marginTop:12,
-        marginBottom:12
+        marginBottom:40
     },
     select_width:{
         width:128,
@@ -28,10 +29,37 @@ const styles ={
        boxPowierzchnia:{
         display:"inline-block"
     },
+    input_search: {
+      width:100,
+      overflowX: 'hidden'
+    },
     FilterBox_h4:{
         margin:0,
         textAlign:'left',
         marginBottom:5,
+        fontWeight: 'inherit',
+        lineHeight: 'inherit',
+        fontFamily: 'inherit',
+        fontSize: 15
+    },
+    text_possition: {
+      marginLeft: 25,
+      marginRight: 5,
+      width: 100,
+      height:35,
+      backgroundColor: 'white',
+      float:'left'
+    },
+    text_in_area: {
+      paddingLeft:10,
+      color: 'black', 
+      fontSize: '15px',
+      width:100,
+      height:'auto',
+      lineHeight:'10px'
+    },
+    AutoCompletee:{
+      height:35,
     }
  
 }
@@ -42,7 +70,8 @@ export default class FilterBox extends Component {
     this.handleChange = this.handleChange.bind(this);
      this.state = {
       value: 1,
-      name:""
+      name:"",
+      dataSource:['50','100','150','200','250','300']
     };
   }
 
@@ -54,57 +83,41 @@ export default class FilterBox extends Component {
       <div style={styles.select_possition}>
       <div style={styles.boxPowierzchnia}>
       <h4 style={styles.FilterBox_h4}> Cena </h4>
-        <SelectField
-          className="filterBox_select"
-          style={styles.select_width}
-          value={this.state.value}
-          onChange={this.handleChange}
-          autoWidth={true}
+        <AutoComplete style={styles.text_possition}
+          hintText="Od"
+          dataSource={this.state.dataSource}
           underlineShow={false}
-          labelStyle={styles.filterBox_label}
-          iconStyle={styles.filterBox_icon}
-        >
-          <MenuItem value={1} primaryText="Sprzedaż"/>
-        </SelectField>
-        <SelectField
-        className="filterBox_select"
-          style={styles.select_width}
-          value={this.state.value}
-          onChange={this.handleChange}
-          autoWidth={true}
+          textFieldStyle= {styles.text_in_area}
+          menuStyle={styles.input_search}
+          anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:100}}
+        />
+        <AutoComplete style={styles.text_possition}
+          hintText="Do"
+          dataSource={this.state.dataSource}
           underlineShow={false}
-          labelStyle={styles.filterBox_label}
-           iconStyle={styles.filterBox_icon}
-        >
-          <MenuItem value={1} primaryText="Sprzedaż"/>
-        </SelectField>
+          textFieldStyle= {styles.text_in_area}
+          menuStyle={styles.input_search}
+          anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:100}}
+        />
         </div>
         <div style={styles.boxCena}>
         <h4 style={styles.FilterBox_h4}> Powierzchnia </h4>
-        <SelectField
-           className="filterBox_select"
-          style={styles.select_width}
-          value={this.state.value}
-          onChange={this.handleChange}
-          autoWidth={true}
+        <AutoComplete style={styles.text_possition}
+          hintText="Od"
+          dataSource={this.state.dataSource}
           underlineShow={false}
-          labelStyle={styles.filterBox_label}
-           iconStyle={styles.filterBox_icon}
-        >
-          <MenuItem value={1} primaryText="Sprzedaż"/>
-        </SelectField>
-        <SelectField
-        className="filterBox_select"
-          style={styles.select_width}
-          value={this.state.value}
-          onChange={this.handleChange}
-          autoWidth={true}
+          textFieldStyle= {styles.text_in_area}
+          menuStyle={styles.input_search}
+          anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:100}}
+        />
+        <AutoComplete style={styles.text_possition}
+          hintText="Do"
+          dataSource={this.state.dataSource}
           underlineShow={false}
-          labelStyle={styles.filterBox_label}
-           iconStyle={styles.filterBox_icon}
-        >
-          <MenuItem value={1} primaryText="Sprzedaż"/>
-        </SelectField>
+          textFieldStyle= {styles.text_in_area}
+          menuStyle={styles.input_search}
+          anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:100}}
+        />
         </div>
       </div>
     );

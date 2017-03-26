@@ -27,10 +27,9 @@ const styles = {
     textAlign: 'center',
     display: 'inline-block',
     border: 'solid 1px rgb(117, 117, 117)',
-    padding: '20px 10px',
+    padding: 20,
     backgroundColor: 'rgb(117, 115, 112)',
     color: 'white',
-    paddingBottom: 40,
   },
   input_search: {
     width:440
@@ -73,8 +72,8 @@ const styles = {
   filtr_button:{
     float:'right',
     position:'absolute',
-    right:70,
-    top:70
+    right:95,
+    top:63
   },
   filterBox:{
     marginTop: 20,
@@ -161,10 +160,10 @@ export default class Search extends Component {
         anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:'440px'}}
         />
       < RaisedButton label="Szukaj" labelColor="#757370" backgroundColor="#d6df23" style={styles.button_search} labelStyle={styles.button_search_label} />
-       <IconButton style ={{height:'auto', padding:0}}iconStyle={{width:50, height:'auto', color:'rgb(214, 223, 35)'}} ><Map  /></IconButton>
+       <IconButton style ={{height:'auto', padding:0 , width:30}}iconStyle={{width:50, height:'auto', color:'rgb(214, 223, 35)'}} ><Map  /></IconButton>
        <FlatButton hoverColor="none" rippleColor = "none" label="Filtry" labelStyle={styles.filtr_label} style={styles.filtr_button} primary={true} onTouchTap={this.onClick} />
           { this.state.isToggleOn ? <FilterBox style={styles.filterBox}/> : null }
-            <GoogleMap center = {location} markers = {this.state.geo}/>
+          
     </Paper>
 
   </div>
