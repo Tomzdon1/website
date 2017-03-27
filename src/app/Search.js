@@ -94,7 +94,7 @@ export default class Search extends Component {
     this.onClick = this.onClick.bind(this);
     this.onClickMap = this.onClickMap.bind(this);
    this.state={
-     name:[],
+     name:['Oleśnica', 'Namysłów', 'Syców'],
      geo:[],
       isToggleOn: false,
       isToggleMapOn: false
@@ -110,35 +110,7 @@ export default class Search extends Component {
       isToggleMapOn: !prevState.isToggleMapOn
     }));
   }
-  componentDidMount(){
-    fetch('http://localhost:4000/api/city')
-     .then((response) => response.json())
-      .then((responseJson) => {
-        for(var i =0; i<responseJson.length;i++){
-          var cityArray = this.state.name.slice();
-          cityArray.push(responseJson[i].name);
-          this.setState({name:cityArray});
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-      const url ='http://localhost:4000/api/city';
-      superagent
-      .get(url)
-      .query(null)
-      .set('Accept','text/json')
-      .end((error,response)=>{
-      
-        const venues = response.body[0].venues
-        console.log(JSON.stringify(venues))
-        this.setState({
-          geo : venues
-        })
-       
-      })
-
-}
+ 
    render() {
      const location = {
        lat:51.0759200,
@@ -146,10 +118,12 @@ export default class Search extends Component {
      }
      const markers = [
        {
-         location: {
             lat:51.0759200,
             lng:17.7228400,
-         }
+       },
+         {
+            lat:51.0759200,
+            lng:17.7228400,
        }
      ]
     return (

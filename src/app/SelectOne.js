@@ -32,24 +32,10 @@ export default class SelectOne extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       value: 1,
-      name:""
+      name:["Wynajem"]
     };
   }
 
-componentDidMount(){
-  
-    fetch('http://localhost:4000/api/genres')
-     .then((response) => response.json())
-      .then((responseJson) => {
-
-         this.setState({name: responseJson[0].name}) 
-         console.log(this.state.name)
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-}
     
   handleChange(event, index, value){
       this.setState({value});
