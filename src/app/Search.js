@@ -141,14 +141,14 @@ export default class Search extends Component {
 }
    render() {
      const location = {
-       lat:40.7575285,
-       lng:-73.9884469,
+       lat:51.0759200,
+       lng:17.7228400,
      }
      const markers = [
        {
          location: {
-            lat:40.7575285,
-            lng:-73.9884469,
+            lat:51.0759200,
+            lng:17.7228400,
          }
        }
      ]
