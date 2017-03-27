@@ -12,7 +12,7 @@ import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigati
 import ShoppingBasket from 'material-ui/svg-icons/action/event';
 import FavoriteToolbar from 'material-ui/svg-icons/action/grade';
 import AccountToolbar from 'material-ui/svg-icons/action/account-box';
-
+import Badge from 'material-ui/Badge';
 
 const logoToolbar = <img className="toolbar_logo" src="logo.png"  />;
 const pasekToolbar = <img src="pasek2.png"/>;
@@ -40,6 +40,12 @@ const styles = {
       height:'80px',
       margin: '0 10px',
       marginLeft:0,
+    },
+    buttonIconsBadge:{
+       minWidth : 0,
+      padding:10,
+      paddingRight:10,
+      paddingLeft:10,
     }
 
 }
@@ -64,9 +70,18 @@ export default class ToolbarClass extends React.Component {
           <BottomNavigationItem style={styles.buttonIcons}
             icon={shopTravel}
           />
-          <BottomNavigationItem style={styles.buttonIcons}
+          <Badge
+            badgeContent={2}
+            primary={true}
+            style={styles.buttonIconsBadge}
+            className="badge"
+            badgeStyle = {{backgroundColor:'rgb(214, 223, 35)'}}
+
+          >
+             <BottomNavigationItem style={styles.buttonIcons}
             icon={favoriteToolbar}
           />
+            </Badge>
           <BottomNavigationItem style={styles.buttonIcons}
             icon={accountToolbar}
           />

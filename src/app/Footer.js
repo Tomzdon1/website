@@ -3,10 +3,18 @@ import Paper from 'material-ui/Paper';
 import Subheader from 'material-ui/Subheader';
 import {List, ListItem} from 'material-ui/List';
 import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNavigation';
-
+import Phone from 'material-ui/svg-icons/communication/phone';
+import Email from 'material-ui/svg-icons/communication/email';
+import {grey50,} from 'material-ui/styles/colors';
+import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
 const recentsIcon = <img src='images/youtube_grey.jpg' width='30'/>
 const faceboookIcom = <img src='images/facebook_grey.jpg' width='30'/>
 const googleIcon = <img src='images/google.png' width='100'/>
+
+
+const phone = <Phone/>;
+
 const styles = {
   root:{
     height: 'auto',
@@ -64,6 +72,36 @@ const styles = {
     height:68, 
     width:'auto'
   },
+  span:{
+    position: 'absolute',
+    marginLeft: '15px',
+    color: 'rgb(210, 208, 204)',
+  },
+  span_app:{
+    position: 'absolute',
+    color: '#fff',
+    fontSize: '14px',
+  },
+   span_news:{
+    position: 'absolute',
+    color: '#fff',
+    marginTop:'28px',
+    fontSize: '14px',
+  },
+  img:{
+        marginTop: '15px'
+  },
+  news_email:{
+    marginTop:'55px',
+    backgroundColor:'#fff',
+  },
+  news_input:{
+    marginLeft:'10px'
+  },
+  button_save:{
+    float:'right',
+    color:'#fff'
+  }
 };
 
 const Footer = () => (
@@ -72,7 +110,6 @@ const Footer = () => (
     <Paper style={styles.box} zDepth={0} >
     <Paper style={styles.kosikowski_paper} zDepth={0}  >
     <Subheader style={styles.list_header}>Kosikowski</Subheader>
-     <div><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan, mauris at auctor mollis, lorem diam gravida ante, ultrices vehicula ipsum diam vel tortor</h5></div>
         <ul>
         <li><a href="">O firmie</a> </li>
         <li><a href="">Zgłaszam ofertę</a> </li>
@@ -83,24 +120,27 @@ const Footer = () => (
 
     </Paper>
     <Paper style={styles.kosikowski_paper} zDepth={0}  >
-    <Subheader style={styles.list_header}>Inne informacje</Subheader>
-    <div><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean accumsan, mauris at auctor mollis, lorem diam gravida ante, ultrices vehicula ipsum diam vel tortor</h5></div>
+    <Subheader style={styles.list_header}>Masz Pytania ?</Subheader>
       <ul>
-        <li><a href="">Konto klienta</a> </li>
-        <li><a href="">Obserwowane oferty</a> </li>
-        <li><a href="">Umów prezentacje</a> </li>
-        <li><a href="">Program MDM</a> </li>
-        <li><a href="">Mapa witryny</a> </li>
-        <li><a href="">Serwis używa cookies</a> </li>
+      <li><Phone color={grey50}/> <span style={styles.span}>77 410 50 60</span></li>
+      <li><a href="mailTo:kontakt@kosikowski.com.pl"><Email color={grey50}/> <span style={styles.span}>kontakt@kosikowski.com.pl</span></a></li>
+      <li><span style={styles.span_app}>Pobierz darmową aplikację mobilną</span></li>
+      <li> 
+        <a href='https://play.google.com/store/apps/details?id=pl.netlinks.KosikowskiHybrid&utm_source=kosikowski.com.pl&utm_campaign=footer&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='pobierz z Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/pl_badge_web_generic.png'style={styles.img} width='130px'/></a>
+    </li>
       </ul>
     </Paper>
     <Paper style={styles.kosikowski_paper_social} zDepth={0}  >
-      <div className="fbBox">
+      <ul>
+      <li><div className="fbBox">
             <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbiuro.kosikowski&amp;width&amp;height=198&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=false&amp;locale=pl_PL&amp;show_border=false&amp;appId=232720443518804" scrolling="no" frameborder="0" style={styles.fbBox} allowtransparency="true">
             </iframe>
-      </div>
-    <a href="https://play.google.com/store/apps/details?id=pl.netlinks.KosikowskiHybrid" style={styles.list_box}  title="Kosikowski. Serwis Nieruchomości - Google Play" ><img src='images/google.png' width='100'/></a>
-
+      </div></li>
+      <li><span style={styles.span_news}>Nie przegap nowych ofert</span></li>
+      <li> <TextField style={styles.news_email} floatingLabelFixed={false} underlineShow={false} inputStyle={styles.news_input} hintStyle={styles.news_input}
+        hintText="Adres e-mail"
+  />     <FlatButton style={styles.button_save} label="Zapisz" /></li>
+    </ul>
     </Paper>
     </Paper>
     </Paper>

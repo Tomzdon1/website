@@ -11,7 +11,6 @@ import FontIcon from 'material-ui/FontIcon';
 import {red500, yellow500, blue500, grey500} from 'material-ui/styles/colors';
 import FilterBox from './FilterBox';
 import GoogleMap from './Map';
-import GooglePlace from './Places';
 const recentsIcon = <img src='images/map.png' />;
 import FlatButton from 'material-ui/FlatButton';
 import superagent from 'superagent';
@@ -93,15 +92,22 @@ export default class Search extends Component {
   constructor(props, context) {
     super(props, context);
     this.onClick = this.onClick.bind(this);
+    this.onClickMap = this.onClickMap.bind(this);
    this.state={
      name:[],
      geo:[],
-      isToggleOn: false
+      isToggleOn: false,
+      isToggleMapOn: false
    }
   }
   onClick(){
      this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
+    }));
+  }
+   onClickMap(){
+     this.setState(prevState => ({
+      isToggleMapOn: !prevState.isToggleMapOn
     }));
   }
   componentDidMount(){
@@ -160,9 +166,10 @@ export default class Search extends Component {
         anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:'440px'}}
         />
       < RaisedButton label="Szukaj" labelColor="#757370" backgroundColor="#d6df23" style={styles.button_search} labelStyle={styles.button_search_label} />
-       <IconButton style ={{height:'auto', padding:0 , width:30}}iconStyle={{width:50, height:'auto', color:'rgb(214, 223, 35)'}} ><Map  /></IconButton>
-       <FlatButton hoverColor="none" rippleColor = "none" label="Filtry" labelStyle={styles.filtr_label} style={styles.filtr_button} primary={true} onTouchTap={this.onClick} />
+       <IconButton  onTouchTap={this.onClickMap} style ={{height:'auto', padding:0 , width:30}}iconStyle={{width:50, height:'auto', color:'rgb(214, 223, 35)'}} ><Map  /></IconButton>
+       <FlatButton hoverColor="none" rippleColor = "none" label="Filtry" labelStyle={styles.filtr_label} style={styles.filtr_button} onTouchTap={this.onClick} />
           { this.state.isToggleOn ? <FilterBox style={styles.filterBox}/> : null }
+          { this.state.isToggleMapOn ?   <GoogleMap center = {location} markers = {markers}/> : null }
           
     </Paper>
 

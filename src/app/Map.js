@@ -7,8 +7,8 @@ class Map extends Component {
         const markers = this.props.markers.map((venue, i ) =>{
             const marker = {
                 position: {
-                    lat: parseFloat(venue.lat),
-                    lng: parseFloat(venue.lng),
+                    lat: parseFloat(marker),
+                    lng: parseFloat(marker),
                 }
             }
             return <Marker key = {i} {...marker} />

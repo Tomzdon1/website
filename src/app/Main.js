@@ -20,7 +20,7 @@ const styles = {
     
   },
   tomek:{
-    paddingTop :0 
+    paddingTop :0  
   },
 };
 const muiTheme = getMuiTheme({

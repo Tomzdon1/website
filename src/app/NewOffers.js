@@ -100,7 +100,7 @@ const NewOffers = () => (
 <Paper style={styles.paper_with_box} zDepth={0} >
   <h2 style={styles.h2}>Najnowsze oferty</h2>
   <div style={styles.root}>
-    <GridList style={styles.gridList} cols= {3}  cellHeight={180} >
+    <a href="#"><GridList style={styles.gridList} cols= {3}  cellHeight={180} >
       {tilesData.map((tile) => (
         <GridTile
           key={tile.img}
@@ -111,10 +111,10 @@ const NewOffers = () => (
           titleBackground="linear-gradient(to top, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.3) 70%,rgba(0,0,0,0) 100%)"
           style={styles.textList}
         >
-          <a href="#" title={tile.title}><img src={tile.img} /></a>
+          <a href="#" title={tile.title +" " + tile.subtitle}><img src={tile.img} /></a>
         </GridTile>
       ))}
-    </GridList>
+    </GridList></a>
   </div>
   </Paper>
   </Paper>

@@ -165,3 +165,12 @@ color:white;
     line-height: 1.2;
     color:rgb(117, 115, 112)
 }
+.badge{
+  transition-duration: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-property: top;
+  top:18px
+}
+.sticky_badge{
+  top: 2px
+}
