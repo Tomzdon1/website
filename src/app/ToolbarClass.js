@@ -69,6 +69,7 @@ export default class ToolbarClass extends React.Component {
           <ToolbarSeparator className="toolbar_separator" style={styles.toolbar_separator} />
           <BottomNavigationItem style={styles.buttonIcons}
             icon={shopTravel}
+            disableTouchRipple={true}
           />
           <Badge
             badgeContent={2}
@@ -80,10 +81,12 @@ export default class ToolbarClass extends React.Component {
           >
              <BottomNavigationItem style={styles.buttonIcons}
             icon={favoriteToolbar}
+            disableTouchRipple={true}
           />
             </Badge>
           <BottomNavigationItem style={styles.buttonIcons}
             icon={accountToolbar}
+            disableTouchRipple={true}
           />
         </ToolbarGroup>
       

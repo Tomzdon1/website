@@ -26,7 +26,8 @@ const styles = {
   },
   box:{
     height: 'auto',
-    maxWidth: '940px',
+    maxWidth: '960px',
+    minWidth: '940px',
     textAlign: 'center',
     backgroundColor: 'none',
     fontSize: '13px',
@@ -35,13 +36,13 @@ const styles = {
   kosikowski_paper:{
     height: 'auto',
     width: 300,
-    margin: 10,
     textAlign: 'center',
     backgroundColor: 'none',
     color:'white',
     display: 'inline-block',
     fontSize: '13px',
     float:'left',
+    marginRight:"15px"
   },
   kosikowski_paper_social:{
     height: 'auto',

@@ -6,7 +6,6 @@ import AutoComplete from 'material-ui/AutoComplete';
 const styles ={
     select_possition:{
         float:'left',
-        marginLeft:'25px',
         marginTop: 20,
         height: 20,
         marginTop:12,
@@ -23,7 +22,7 @@ const styles ={
         top:7
     },
     boxCena:{
-        marginLeft:70,
+        marginLeft:75,
         display:"inline-block"
     },
        boxPowierzchnia:{
@@ -43,7 +42,6 @@ const styles ={
         fontSize: 15
     },
     text_possition: {
-      marginLeft: 25,
       marginRight: 5,
       width: 100,
       height:35,
@@ -71,13 +69,25 @@ export default class FilterBox extends Component {
      this.state = {
       value: 1,
       name:"",
+      searchText: '',
       dataSource:['50','100','150','200','250','300']
     };
   }
 
   handleChange(event, index, value){
       this.setState({value});
-  }  
+  } ;
+   handleUpdateInput(searchText){
+    this.setState({
+      searchText: searchText,
+    });
+  };
+
+  handleNewRequest(){
+    this.setState({
+      searchText: '',
+    });
+  };
   render() {
     return (
       <div style={styles.select_possition}>
@@ -87,6 +97,11 @@ export default class FilterBox extends Component {
           hintText="Od"
           dataSource={this.state.dataSource}
           underlineShow={false}
+          searchText={this.state.searchText}
+          onUpdateInput={this.handleUpdateInput}
+          onNewRequest={this.handleNewRequest}
+          filter={(searchText, key) => (key.indexOf(searchText) !== -1)}
+          openOnFocus={true}
           textFieldStyle= {styles.text_in_area}
           menuStyle={styles.input_search}
           anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:100}}
@@ -95,6 +110,11 @@ export default class FilterBox extends Component {
           hintText="Do"
           dataSource={this.state.dataSource}
           underlineShow={false}
+          searchText={this.state.searchText}
+          onUpdateInput={this.handleUpdateInput}
+          onNewRequest={this.handleNewRequest}
+          filter={(searchText, key) => (key.indexOf(searchText) !== -1)}
+          openOnFocus={true}
           textFieldStyle= {styles.text_in_area}
           menuStyle={styles.input_search}
           anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:100}}
@@ -106,6 +126,11 @@ export default class FilterBox extends Component {
           hintText="Od"
           dataSource={this.state.dataSource}
           underlineShow={false}
+          searchText={this.state.searchText}
+          onUpdateInput={this.handleUpdateInput}
+          onNewRequest={this.handleNewRequest}
+          filter={(searchText, key) => (key.indexOf(searchText) !== -1)}
+          openOnFocus={true}
           textFieldStyle= {styles.text_in_area}
           menuStyle={styles.input_search}
           anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:100}}
@@ -114,6 +139,11 @@ export default class FilterBox extends Component {
           hintText="Do"
           dataSource={this.state.dataSource}
           underlineShow={false}
+          searchText={this.state.searchText}
+          onUpdateInput={this.handleUpdateInput}
+          onNewRequest={this.handleNewRequest}
+          filter={(searchText, key) => (key.indexOf(searchText) !== -1)}
+          openOnFocus={true}
           textFieldStyle= {styles.text_in_area}
           menuStyle={styles.input_search}
           anchorOrigin= {{ vertical: 'bottom', horizontal: 'left',width:100}}

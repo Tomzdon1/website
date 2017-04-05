@@ -46,11 +46,10 @@ const styles = {
     h2: {
         textAlign: 'left',
         color: '#757370',
-        fontFamily: 'segoe ui',
-        fontSize: '16px',
-        margin: '10px 0 0',
+        fontSize: '25px',
+        margin: '10px 10px 0',
         paddingBottom: '2px',
-        fontWeight: 'bold',
+        fontWeight: 'lighter',
         textTransform: 'uppercase'
     }
 };
