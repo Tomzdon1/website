@@ -18,10 +18,9 @@
 
 <script>
 $(document).ready(function() {
-  if (getCookie("mobile") == null ){
-    document.cookie = "mobile=1";
+  if (getCookie('mobile') == ""){
+      document.cookie = "mobile=1";
   }
- 
    var bagdeMobile = getCookie("mobile");
    
    var stickyNavTop = $('.toolbar_position').offset().top;
@@ -47,8 +46,8 @@ $(document).ready(function() {
    $(window).scroll(function() {
       stickyNav();
    });
-   if (bagdeMobile == '0') {
-     $(".window-badge-mobile-container").css("display","none");
+   if (bagdeMobile == '1') {
+     $(".window-badge-mobile-container").css("display","block");
    }
 
    $("#mobileAppsbadgeClose").click(function(){
@@ -85,7 +84,9 @@ $(document).ready(function() {
       s.parentNode.insertBefore(wf, s);
     })();
   </script>
-  <script>
+  <script type="text/javascript">
+
+
   function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -100,7 +101,8 @@ $(document).ready(function() {
         }
     }
     return "";
-    }
+  }
+
   </script>
   
 	<script src="app.js"></script>
