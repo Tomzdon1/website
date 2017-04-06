@@ -9,7 +9,7 @@ const styles ={
         marginTop: 20,
         height: 20,
         marginTop:12,
-        marginBottom:40
+        marginBottom:50
     },
     select_width:{
         width:128,

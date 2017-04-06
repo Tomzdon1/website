@@ -3,12 +3,12 @@ import { GoogleMapLoader, GoogleMap, Marker} from 'react-google-maps'
 
 class Map extends Component {
     render(){
-        const mapContainer = <div style={{height:'100%', width:'100%'}}></div>
-        const markers = this.props.markers.map((venue, i ) =>{
+        const mapContainer = <div style={{height:'50%', width:'100%', marginTop:'25px'}}></div>
+        const markers = this.props.markers.map((location, i ) =>{
             const marker = {
                 position: {
-                    lat: parseFloat(marker),
-                    lng: parseFloat(marker),
+                    lat: parseFloat(location.lat),
+                    lng: parseFloat(location.lng),
                 }
             }
             return <Marker key = {i} {...marker} />
