@@ -46,8 +46,7 @@ const styles = {
   },
   kosikowski_paper_social:{
     height: 'auto',
-    width: 250,
-    margin: 10,
+    width: 300,
     marginTop:0,
     textAlign: 'center',
     backgroundColor: 'none',
@@ -60,7 +59,7 @@ const styles = {
     color:'white',
     textAlign:'left',
     paddingLeft:0,
-    fontSize:16
+    fontSize:22
   },
   list_box:{
      marginTop:35,
@@ -71,39 +70,58 @@ const styles = {
     border:'none', 
     overflow:'hidden', 
     height:68, 
-    width:'auto'
+    width:'310px'
   },
   span:{
     position: 'absolute',
     marginLeft: '15px',
-    color: 'rgb(210, 208, 204)',
+    color: 'white',
+    fontSize: '18px'
   },
   span_app:{
     position: 'absolute',
     color: '#fff',
-    fontSize: '14px',
+    fontSize: '18px',
+    color:'white',
+    marginTop: 10
   },
    span_news:{
     position: 'absolute',
     color: '#fff',
-    marginTop:'28px',
-    fontSize: '14px',
+    marginTop:'10px',
+    fontSize: '18px',
   },
   img:{
-        marginTop: '15px'
+    marginTop: '25px',
+    width:'190px',
+    marginLeft:'-12px',
+
   },
   news_email:{
-    marginTop:'55px',
-    backgroundColor:'#fff',
+    marginTop:'40px',
+    width:240,
+    backgroundColor:' rgb(172, 171, 168)',
   },
   news_input:{
     marginLeft:'10px'
   },
   button_save:{
     float:'right',
-    color:'#fff'
+    color:'#fff',
+    position: 'absolute',
+    fontSize: '18px',
+    marginTop:'40px',
+    backgroundColor: 'rgb(214, 223, 35)',
+    minWidth:' 68px',
+    height: '48px',
+    marginLeft: 5
+  },
+  label_save:{
+    paddingLeft:0,
+    paddingRight:0
   }
 };
+
 
 const Footer = () => (
   <footer>    
@@ -121,7 +139,7 @@ const Footer = () => (
 
     </Paper>
     <Paper style={styles.kosikowski_paper} zDepth={0}  >
-    <Subheader style={styles.list_header}>Masz Pytania ?</Subheader>
+    <Subheader style={styles.list_header}>Masz Pytania?</Subheader>
       <ul>
       <li><Phone color={grey50}/> <span style={styles.span}>77 410 50 60</span></li>
       <li><a href="mailTo:kontakt@kosikowski.com.pl"><Email color={grey50}/> <span style={styles.span}>kontakt@kosikowski.com.pl</span></a></li>
@@ -134,13 +152,13 @@ const Footer = () => (
     <Paper style={styles.kosikowski_paper_social} zDepth={0}  >
       <ul>
       <li><div className="fbBox">
-            <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbiuro.kosikowski&amp;width&amp;height=198&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=false&amp;locale=pl_PL&amp;show_border=false&amp;appId=232720443518804" scrolling="no" frameborder="0" style={styles.fbBox} allowtransparency="true">
+            <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fbiuro.kosikowski&amp;width=310&amp;height=198&amp;colorscheme=dark&amp;show_faces=false&amp;header=false&amp;stream=false&amp;locale=pl_PL&amp;show_border=false&amp;appId=232720443518804" scrolling="no" frameborder="0" style={styles.fbBox} allowtransparency="true">
             </iframe>
       </div></li>
       <li><span style={styles.span_news}>Nie przegap nowych ofert</span></li>
       <li> <TextField style={styles.news_email} floatingLabelFixed={false} underlineShow={false} inputStyle={styles.news_input} hintStyle={styles.news_input}
         hintText="Adres e-mail"
-  />     <FlatButton style={styles.button_save} label="Zapisz" /></li>
+  />     <FlatButton style={styles.button_save} labelStyle={styles.label_save} label="Zapisz" /></li>
     </ul>
     </Paper>
     </Paper>

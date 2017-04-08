@@ -72,6 +72,7 @@ body {
 a{
   text-decoration: none;
   color: rgb(210, 208, 204);
+  font-size: 18px
 }
 ul{
   list-style: none;
@@ -103,9 +104,9 @@ color:white;
   fill: #d6df23 !important;
 }
 .fbBox{
-  padding-top: 28px;
-  width: auto;
+  width: 310px;
 }
+
 .footer_box{
    background-color: 'rgb(117, 117, 117)',
 }
